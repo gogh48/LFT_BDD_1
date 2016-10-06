@@ -42,7 +42,7 @@ public class AOBMobileTransferStepDefinitions {
         catch (Exception e) {
             }
 
-        myDevice = MobileLab.lockDeviceById("656e674a");
+        myDevice = MobileLab.lockDeviceById("42f6c90d17e1bfb3");
         aobAndroidModel = new AOBAndroid(myDevice);
         aobAndroidModel.AdvantageApplication().restart();
         Reporter.startTest(scenario.getName());
