@@ -43,15 +43,15 @@ public class AOBMobileTransferStepDefinitions {
         catch (Exception e) {
             }
 
-        myDevice = MobileLab.LockDevice(new DeviceDescription(
+        /*myDevice = MobileLab.LockDevice(new DeviceDescription(
         	osType = "Android",
-            osVersion = ">4.4.2"
+            osVersion = ">4.4.2",
             Manufacturer = "Samsung"
 
-        );
+        ));
+        */
 
-
-        //myDevice = MobileLab.lockDeviceById("42f6c90d17e1bfb3");
+        myDevice = MobileLab.lockDeviceById("42f6c90d17e1bfb3");
         aobAndroidModel = new AOBAndroid(myDevice);
         aobAndroidModel.AdvantageApplication().restart();
         Reporter.startTest(scenario.getName());
