@@ -5,6 +5,7 @@ import com.hp.lft.verifications.Verify;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.After;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -105,5 +106,12 @@ public class AOBMobileTransferStepDefinitions {
         Reporter.reportEvent("Balance Check","Final balance after test is run",Status.Warning, myDevice.getSnapshot());
     }
 
-
+    /*
+    @And("^logout from mobile banking app$")
+    public void logoutFromMobileBankingApp() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        aobAndroidModel.AdvantageApplication().MenuUiObject().tap();
+        aobAndroidModel.AdvantageApplication1().LOGOUTLabel().tap();
+        aobAndroidModel.AdvantageApplication1().YesButton().tap();
+    } */
 }
