@@ -43,11 +43,11 @@ public class AOBMobileTransferStepDefinitions {
         catch (Exception e) {
             }
 
-        myDevice = MobileLab.LockDevice(new DeviceDescription
-        {	osType = "Android",
+        myDevice = MobileLab.LockDevice(new DeviceDescription(
+        	osType = "Android",
             osVersion = ">4.4.2"
             Manufacturer = "Samsung"
-        }
+
         );
 
 
