@@ -48,7 +48,7 @@ public class AOBMobileTransferStepDefinitions {
             osVersion = ">4.4.2"
             Manufacturer = "Samsung"
         }
-        )
+        );
 
 
         //myDevice = MobileLab.lockDeviceById("42f6c90d17e1bfb3");
