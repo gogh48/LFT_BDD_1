@@ -1,27 +1,28 @@
 package com.cucumber.stepdefinitions;
 
-import com.hp.lft.unittesting.UnitTestBase;
+import com.cucumber.leanft.AOBAndroid;
+import com.hp.lft.report.ReportException;
+import com.hp.lft.report.Reporter;
+import com.hp.lft.report.Status;
+import com.hp.lft.sdk.GeneralLeanFtException;
+import com.hp.lft.sdk.ModifiableSDKConfiguration;
+import com.hp.lft.sdk.SDK;
+import com.hp.lft.sdk.mobile.Device;
+import com.hp.lft.sdk.mobile.MobileLab;
 import com.hp.lft.verifications.Verify;
-import cucumber.api.PendingException;
-import cucumber.api.java.Before;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import cucumber.api.java.en.And;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.Scenario;
-import com.hp.lft.sdk.*;
-import com.hp.lft.sdk.mobile.*;
-import com.hp.lft.report.*;
 
 import java.io.IOException;
 import java.net.URI;
 
-import com.cucumber.leanft.AOBAndroid;
-
 /**
  * Created by droukman on 10/5/2016.
- * Update by Bohee on 10/6/2016
+ * Update by Bohee on 10/6/2016 change
  */
 public class AOBMobileTransferStepDefinitions {
 
@@ -105,6 +106,7 @@ public class AOBMobileTransferStepDefinitions {
         Verify.areEqual((checkingBalanceAfter - checkingBalanceBefore), 100, "Checking Balance increased by Transfer Amount");
         Reporter.reportEvent("Balance Check","Final balance after test is run",Status.Warning, myDevice.getSnapshot());
     }
+
 
     /*
     @And("^logout from mobile banking app$")
